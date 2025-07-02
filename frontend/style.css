@@ -1,21 +1,175 @@
 body {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 20px auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f3f4f6;
+  color: #111827;
 }
 
-h1 {
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: #111827;
+  color: #fff;
+  padding: 20px 20px; /* reduced padding for tighter header */
   text-align: center;
 }
 
+header .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .profile img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #3b82f6;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+header .info h1 {
+  margin: 5px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+header .info .role {
+  margin: 0 0 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+header .info .social-links a {
+  display: inline-block;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+}
+
+header .info .social-links img {
+  width: 24px;
+  height: 24px;
+  filter: invert(80%);
+}
+
+header .info .social-links a:hover {
+  transform: scale(1.2);
+}
+
+main {
+  padding: 30px 0;
+}
+
+h2 {
+  text-align: center;
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background: #e5e7eb;
+  border: none;
+  padding: 8px 14px;
+  margin: 0 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.filter-btn:hover {
+  background: #d1d5db;
+}
+
+.filter-btn.active {
+  background: #3b82f6;
+  color: #fff;
+}
+
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 li {
-  background: #f0f0f0;
-  margin: 8px 0;
-  padding: 12px;
-  border-radius: 4px;
+  background: #ffffff;
+  margin: 16px 0;
+  padding: 18px 22px;
+  border-left: 4px solid #3b82f6;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+li strong {
+  color: #111827;
+}
+
+li span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination button:hover {
+  background: #2563eb;
+}
+
+.pagination span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  color: #9ca3af;
+}
+
+@media (max-width: 600px) {
+  header .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .info h1 {
+    font-size: 20px;
+  }
 }

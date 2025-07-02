@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>GitHub Activity Feed</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obaidullah Zeeshan | GitHub Activity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>GitHub Activity Feed</h1>
-  <ul id="feed"></ul>
+  <header>
+    <div class="container">
+      <div class="profile">
+        <img src="https://avatars.githubusercontent.com/ObaidGits" alt="Obaidullah Zeeshan" />
+        <div class="info">
+          <h1>Obaidullah Zeeshan</h1>
+          <p class="role">Full-Stack Developer & AI Enthusiast</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/obaidullah-zeeshan/" target="_blank" aria-label="LinkedIn">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://obaidullah-zeeshan.netlify.app/" target="_blank" aria-label="Portfolio">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/netlify.svg" alt="Portfolio">
+            </a>
+            <a href="https://github.com/ObaidGits" target="_blank" aria-label="GitHub">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>📈 Latest GitHub Activity</h2>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="push">Push</button>
+      <button class="filter-btn" data-filter="pull_request">Pull Request</button>
+      <button class="filter-btn" data-filter="merge">Merge</button>
+    </div>
+
+    <ul id="feed"></ul>
+
+    <div class="pagination">
+      <button id="prevPage" aria-label="Previous Page">←</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextPage" aria-label="Next Page">→</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Obaidullah Zeeshan — All rights reserved.</p>
+  </footer>
+
   <script src="main.js"></script>
 </body>
 </html>
