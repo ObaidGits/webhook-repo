@@ -2,5 +2,5 @@ services:
   - type: web
     name: webhook-repo
     env: python
-    buildCommand: ""
+    buildCommand: "pip install -r server/requirements.txt"
     startCommand: "gunicorn server.app:app"
