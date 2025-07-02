@@ -3,4 +3,4 @@ services:
     name: webhook-repo
     env: python
     buildCommand: ""
-    startCommand: "gunicorn app:app"
+    startCommand: "gunicorn server.app:app"
