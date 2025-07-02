@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from datetime import datetime
-from models import mongo, insert_event, get_events
-from config import Config
+from .models import mongo, insert_event, get_events
+from .config import Config
 import pytz
 
 app = Flask(__name__)
